@@ -22,6 +22,8 @@
     <div class="app">
         <h1>溫度換算</h1>
         <div class="ctof">
+            <h2>°C->°F</h2>
+
             <div class="tempdiv">
                 <label for="ctemp-title">攝氏溫度</label><br>
                 <input type="number" v-model:ctemp='ctemp' name="ctemp" id="ctemp">
@@ -34,11 +36,13 @@
                 </h3>
             </div>
         </div>
-<hr>
+        <hr>
         <div class="ftoc" v-if="">
+            <h2>°F->°C</h2>
+
             <div class="tempdiv">
                 <label for="ftemp-title">華氏溫度</label><br>
-                <input type="number" v-model='newf' name="ftemp" id="ftemp">
+                <input type="number" min=32 v-model='newf' name="ftemp" id="ftemp">
             </div>
             <div class="tempdiv">
                 <label for="ctemp-title">攝氏溫度</label><br>
