@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.10/dist/vue.js"></script>
+</head>
+
+<body>
+    <style>
+        .app {
+            width: 100%;
+        }
+
+        .tempdiv {
+            margin: 20px 50px 20px;
+        }
+    </style>
+    <div class="app">
+        <h1>溫度換算</h1>
+        <div class="ctof">
+            <div class="tempdiv">
+                <label for="ctemp-title">攝氏溫度</label><br>
+                <input type="number" v-model:ctemp='ctemp' name="ctemp" id="ctemp">
+            </div>
+
+            <div class="tempdiv">
+                <label for="ftemp-title">華氏溫度</label><br>
+                <h3>
+                    {{ftemp}}
+                </h3>
+            </div>
+        </div>
+<hr>
+        <div class="ftoc" v-if="">
+            <div class="tempdiv">
+                <label for="ftemp-title">華氏溫度</label><br>
+                <input type="number" v-model='newf' name="ftemp" id="ftemp">
+            </div>
+            <div class="tempdiv">
+                <label for="ctemp-title">攝氏溫度</label><br>
+                <h3>{{newC}}</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="ex4.js"></script>
+</body>
+
+</html>
